@@ -11,7 +11,6 @@ import 'package:fluttershare/pages/search.dart';
 import 'package:fluttershare/pages/timeline.dart';
 import 'package:fluttershare/pages/upload.dart';
 import 'package:google_sign_in/google_sign_in.dart';
-import 'create_account.dart';
 
 final GoogleSignIn googleSignIn = GoogleSignIn();
 final usersRef = Firestore.instance.collection('users');
@@ -84,8 +83,6 @@ class _HomeState extends State<Home> {
     }
 
     currentUser = User.fromDocument(doc);
-    print(currentUser);
-    print(currentUser.username);
   }
 
   @override
@@ -120,9 +117,13 @@ class _HomeState extends State<Home> {
     return Scaffold(
       body: PageView(
         children: <Widget>[
-          Timeline(),
+          // Timeline(),
+          RaisedButton(
+            child: Text('Logout'),
+            onPressed: logout,
+          ),
           ActivityFeed(),
-          Upload(),
+          Upload(currentUser: currentUser),
           Search(),
           Profile(),
         ],
@@ -135,24 +136,16 @@ class _HomeState extends State<Home> {
           onTap: onTap,
           activeColor: Theme.of(context).primaryColor,
           items: [
-            BottomNavigationBarItem(
-              icon: Icon(Icons.whatshot),
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(Icons.notifications_active),
-            ),
+            BottomNavigationBarItem(icon: Icon(Icons.whatshot)),
+            BottomNavigationBarItem(icon: Icon(Icons.notifications_active)),
             BottomNavigationBarItem(
               icon: Icon(
                 Icons.photo_camera,
-                size: 50.0,
+                size: 35.0,
               ),
             ),
-            BottomNavigationBarItem(
-              icon: Icon(Icons.search),
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(Icons.account_circle),
-            ),
+            BottomNavigationBarItem(icon: Icon(Icons.search)),
+            BottomNavigationBarItem(icon: Icon(Icons.account_circle)),
           ]),
     );
     // return RaisedButton(
@@ -180,7 +173,7 @@ class _HomeState extends State<Home> {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
             Text(
-              'VisiLync',
+              'FlutterShare',
               style: TextStyle(
                 fontFamily: "Signatra",
                 fontSize: 90.0,
