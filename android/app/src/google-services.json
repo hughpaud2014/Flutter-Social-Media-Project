@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "532044092300",
+    "firebase_url": "https://visilync.firebaseio.com",
+    "project_id": "visilync",
+    "storage_bucket": "visilync.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:532044092300:android:0b51422d4f7d766f473ca9",
+        "android_client_info": {
+          "package_name": "com.hughesxploration.visilync"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "532044092300-ktsanddkln1vodvrig8t2ilocg63nm2e.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.hughesxploration.visilync",
+            "certificate_hash": "89c3418488daa0687a1b3a7384db35608a510c92"
+          }
+        },
+        {
+          "client_id": "532044092300-nm9avd936pb20uh9clul3bk7060fhap9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDclZ5JB4nTgzbsQt-XWuVPmgYRNQlP0Ik"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "532044092300-nm9avd936pb20uh9clul3bk7060fhap9.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "532044092300-5f62dk7nbqf16f6spkk7ueskno8d9q7p.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.hughesxploration.visilync"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
