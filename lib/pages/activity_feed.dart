@@ -32,7 +32,7 @@ class _ActivityFeedState extends State<ActivityFeed> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.blueGrey,
+      backgroundColor: Colors.orange,
       appBar: header(context, titleText: "Activity Feed"),
       body: Container(
           child: FutureBuilder(
